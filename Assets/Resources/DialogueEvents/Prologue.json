@@ -1,16 +1,16 @@
 {
   "eventInfoList": [
     {
-      "dialogueText": "<Nat's description here> stands over you."
+      "dialogueText": "It is freezing. The rocky ground beneath you drains what little heat there is from your body."
     },
     {
-      "dialogueText": "It is dreadfully cold."
+      "dialogueText": "You look up at someone, standing over you."
     },
     {
-      "dialogueText": "You feel as though you embody winter, as if touching anything would freeze the object to ice."
+      "dialogueText": "..."
     },
     {
-      "dialogueText": "You look up at them, meeting their gaze."
+      "dialogueText": "In the darkness, you can make out a pair of eyes. Kind eyes. You feel safe, despite the numbing cold."
     },
     {
       "dialogueText": "..."
@@ -19,14 +19,22 @@
       "dialogueText": "You keep eye contact for a moment before they break the silence."
     },
     {
-      "dialogueText": "\"I don't know how to tell you this, @, but you didn't make it.\"",
-      "nameText": "Natalia"
+      "dialogueText": "\"Close your eyes, @,\" a low voice says. \"Rest.\""
     },
     {
-      "dialogueText": "Your guest allows you a moment to digest the news. You didn't make it."
+      "dialogueText": "You obey. The world around you closes into blackness, and an icy chill brushes against your cheek."
     },
     {
-      "dialogueText": "What, exactly, does that mean? You're about to ask, before they speak once more."
+      "dialogueText": "You feel nothing. You try to adjust your arms and legs, but you can't tell if they actually moved."
+    },
+    {
+      "dialogueText": "You hear the voice say something else, but now it sounds distant. A world away from you and your thoughts."
+    },
+    {
+      "dialogueText": "It's so cold..."
+    },
+    {
+      "dialogueText": "..."
     }
   ]
 }

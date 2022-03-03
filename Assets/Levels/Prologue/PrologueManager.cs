@@ -11,7 +11,7 @@ namespace Game.Levels
         [SerializeField] GameObject targetExit = null;
         CutsceneManager cutsceneManager;
 
-        Actors.NPCAI officer;
+        Actors.FollowAI officer;
         NameSelect nameselect;
         const float MUSIC_FADE = 0.01f;
         const int INTRO_SCENE_ID = 1;
@@ -19,7 +19,7 @@ namespace Game.Levels
         void Start()
         {
             cutsceneManager = FindObjectOfType<CutsceneManager>();
-            officer = FindObjectOfType<Actors.NPCAI>();
+            officer = FindObjectOfType<Actors.FollowAI>();
             nameselect = FindObjectOfType<NameSelect>();
             nameselect.NotifyNameSelected += StartPrologue;
         }
