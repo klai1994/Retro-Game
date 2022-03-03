@@ -75,7 +75,7 @@ namespace Game.Actors
                     ((ActorAvatar)this).FaceDirection(playerAvatar.transform.position);
                 }
 
-                Letterbox.dialogueSystem.InitiateDialogue(eventNames[EventIndex]);
+                LetterboxController.letterboxController.InitiateDialogue(eventNames[EventIndex]);
                 EventIndex++;
             }
         }

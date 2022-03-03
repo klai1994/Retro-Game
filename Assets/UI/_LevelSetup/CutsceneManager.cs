@@ -11,7 +11,7 @@ namespace Game.Levels
     {
         [SerializeField] Image fadePanel = null;
 
-        public Letterbox letterbox { get { return FindObjectOfType<Letterbox>(); } private set { } }
+        public LetterboxController letterbox { get { return FindObjectOfType<LetterboxController>(); } private set { } }
         public MusicManager musicManager { get { return MusicManager.Instance(); } private set { } }
 
         const float FADE_INCREMENT = 0.25f;

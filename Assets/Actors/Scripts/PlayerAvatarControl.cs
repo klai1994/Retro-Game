@@ -67,7 +67,7 @@ namespace Game.Actors
         // Update is called once per frame
         void Update()
         {
-            PlayerIsFree = !(Letterbox.dialogueSystem.EventOccuring);
+            PlayerIsFree = !(LetterboxController.letterboxController.EventOccuring);
 
             if (Input.GetKeyDown(KeyCode.C) && BroadcastPlayerInteraction != null)
             {

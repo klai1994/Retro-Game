@@ -5,9 +5,9 @@ using System;
 
 namespace Game.CameraUI.Dialogue
 {
-    public class Letterbox : MonoBehaviour
+    public class LetterboxController : MonoBehaviour
     {
-        public static Letterbox dialogueSystem;
+        public static LetterboxController letterboxController;
        
         [SerializeField] Font font = null;
         [SerializeField] GameObject dialogueUIFrame = null;
@@ -59,11 +59,11 @@ namespace Game.CameraUI.Dialogue
 
         void Awake()
         {
-            if (dialogueSystem == null)
+            if (letterboxController == null)
             {
-                dialogueSystem = this;
+                letterboxController = this;
             }
-            else if (dialogueSystem != this)
+            else if (letterboxController != this)
             {
                 Debug.LogError("There is more than once instance of DialogueSystem!");
             }
