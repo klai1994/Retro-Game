@@ -1,0 +1,14 @@
+{
+  "eventInfoList": [
+    {
+      "characterPortrait": "",
+      "dialogueText": "This blob is purple.",
+      "voice": "default"
+    },
+    {
+      "characterPortrait": "",
+      "dialogueText": "...What an incredible observation.",
+      "voice": "default"
+    }
+  ]
+}

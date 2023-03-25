@@ -1,0 +1,19 @@
+{
+  "eventInfoList": [
+    {
+      "characterPortrait": "",
+      "dialogueText": "Your doppleganger looks at you intently.",
+      "voice": "default"
+    },
+    {
+      "characterPortrait": "",
+      "dialogueText": "Very intently.",
+      "voice": "default"
+    },
+    {
+      "characterPortrait": "",
+      "dialogueText": "...It's kind of creeping you out.",
+      "voice": "default"
+    }
+  ]
+}
