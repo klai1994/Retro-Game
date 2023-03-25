@@ -1,23 +1,21 @@
 ﻿using UnityEngine;
 
-namespace Game
+
+public class PlayerData : ActorStats
 {
-    public class PlayerData : ActorStats
+    static PlayerData playerData;
+
+    public static PlayerData GetPlayerData()
     {
-        static PlayerData playerData;
-
-        public static PlayerData GetPlayerData()
+        if (playerData == null)
         {
-            if (playerData == null)
-            {
-                playerData = ScriptableObject.CreateInstance<PlayerData>();
-            }
-            return playerData;
+            playerData = ScriptableObject.CreateInstance<PlayerData>();
         }
+        return playerData;
+    }
 
-        public override void Init(string name)
-        {
-            base.Init(name);
-        }
+    public override void Init(string name)
+    {
+        base.Init(name);
     }
 }

@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Game.Actors
-{
+
     [RequireComponent(typeof(ActorAvatar))]
     public class FollowAI : MonoBehaviour
     {
@@ -57,4 +56,3 @@ namespace Game.Actors
         }
 
     }
-}
