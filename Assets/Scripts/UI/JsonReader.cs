@@ -10,14 +10,13 @@ namespace Game.CameraUI.Dialogue
     /// </summary>
     public static class JsonReader
     {
+        static Object[] dialogueEvents = Resources.LoadAll<Object>("DialogueJson");
         public static DialogueEventHolder GetDialogueEvent(DialogueEventName dialogueEventName)
         {   
             int eventIndex = (int)dialogueEventName;
             string jsonData = dialogueEvents[eventIndex].ToString();
             return JsonMapper.ToObject<DialogueEventHolder>(jsonData);
         }
-
-        static Object[] dialogueEvents = Resources.LoadAll<Object>("DialogueEvents");
     }
 
     /// <summary>

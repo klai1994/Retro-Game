@@ -74,7 +74,7 @@ namespace Game.CameraUI.Dialogue
 
             // Grab the portraits and voice files from the resources folder
             dialoguePortraits = Resources.LoadAll<Sprite>("DialoguePortraits");
-            voices = Resources.LoadAll<AudioClip>("Voices");
+            voices = Resources.LoadAll<AudioClip>("DialogueVoices");
         }
 
         void Update()
