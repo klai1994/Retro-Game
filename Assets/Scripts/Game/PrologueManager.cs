@@ -17,7 +17,7 @@ public class PrologueManager : MonoBehaviour
     void Start()
     {
         cutsceneManager = FindObjectOfType<CutsceneManager>();
-        officer = FindObjectOfType<Actors.FollowAI>();
+        officer = FindObjectOfType<FollowAI>();
         nameselect = FindObjectOfType<NameSelect>();
         NameSelect.NotifyNameSelected += StartPrologue;
     }

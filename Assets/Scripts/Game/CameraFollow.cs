@@ -19,7 +19,7 @@ public class CameraFollow : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        Target = Actors.PlayerAvatarControl.GetPlayerInstance().transform;
+        Target = PlayerAvatarControl.GetPlayerInstance().transform;
         Zoom = DEFAULT_ZOOM;
     }
 
