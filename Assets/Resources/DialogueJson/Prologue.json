@@ -1,40 +1,7 @@
 {
   "eventInfoList": [
     {
-      "dialogueText": "It is freezing. The rocky ground beneath you drains what little heat there is from your body."
-    },
-    {
-      "dialogueText": "You look up at someone, standing over you."
-    },
-    {
-      "dialogueText": "..."
-    },
-    {
-      "dialogueText": "In the darkness, you can make out a pair of eyes. Kind eyes. You feel safe, despite the numbing cold."
-    },
-    {
-      "dialogueText": "..."
-    },
-    {
-      "dialogueText": "You keep eye contact for a moment before they break the silence."
-    },
-    {
-      "dialogueText": "\"Close your eyes, @,\" a low voice says. \"Rest.\""
-    },
-    {
-      "dialogueText": "You obey. The world around you closes into blackness, and an icy chill brushes against your cheek."
-    },
-    {
-      "dialogueText": "You feel nothing. You try to adjust your arms and legs, but you can't tell if they actually moved."
-    },
-    {
-      "dialogueText": "You hear the voice say something else, but now it sounds distant. A world away from you and your thoughts."
-    },
-    {
-      "dialogueText": "It's so cold..."
-    },
-    {
-      "dialogueText": "..."
+      "dialogueText": "Hi"
     }
   ]
 }
