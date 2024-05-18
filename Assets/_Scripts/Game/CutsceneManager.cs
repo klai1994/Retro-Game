@@ -11,8 +11,8 @@ public class CutsceneManager : MonoBehaviour
     public LetterboxController letterbox { get { return FindObjectOfType<LetterboxController>(); } private set { } }
     public MusicManager musicManager { get { return MusicManager.Instance(); } private set { } }
 
-    const float FADE_INCREMENT = 0.25f;
-    const float FADE_START_DELAY = 5f;
+    public float fadeIncrement = 0.25f;
+    public float fadeStartDelay = 5f;
     float alphaFade;
 
     public delegate void FadeInEventHandler(object sender, EventArgs e);
@@ -23,13 +23,13 @@ public class CutsceneManager : MonoBehaviour
     // Delays fade, then fades in panel and music
     public IEnumerator FadeIn(DialogueEventName eventName)
     {
-        yield return new WaitForSeconds(FADE_START_DELAY);
+        yield return new WaitForSeconds(fadeStartDelay);
         letterbox.gameObject.SetActive(true);
         alphaFade = 1;
 
         while (fadePanel.color.a > 0)
         {
-            alphaFade -= FADE_INCREMENT * Time.deltaTime;
+            alphaFade -= fadeIncrement * Time.deltaTime;
             fadePanel.color = new Color(0, 0, 0, alphaFade);
             yield return null;
         }
@@ -41,17 +41,17 @@ public class CutsceneManager : MonoBehaviour
     // Fades music, then panel, delays scene load then loads scene.
     public IEnumerator FadeOut()
     {
-        yield return new WaitForSeconds(FADE_START_DELAY);
+        yield return new WaitForSeconds(fadeStartDelay);
         alphaFade = 0;
 
         while (fadePanel.color.a < 1)
         {
-            alphaFade += FADE_INCREMENT * Time.deltaTime;
+            alphaFade += fadeIncrement * Time.deltaTime;
             fadePanel.color = new Color(0, 0, 0, alphaFade);
             yield return null;
         }
 
-        yield return new WaitForSeconds(FADE_START_DELAY);
+        yield return new WaitForSeconds(fadeStartDelay);
         fadeOutEventHandler?.Invoke(this, EventArgs.Empty);
     }
 }

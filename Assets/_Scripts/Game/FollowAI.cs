@@ -10,7 +10,9 @@
         
         [SerializeField] float maxChaseDistance = 5f;
         [SerializeField] float destroyThreshold = 20f;
-        [SerializeField] float stoppingDistance = 2f;
+        public float stoppingDistance = 2f;
+
+        public bool canChase = false;
 
         // Use this for initialization
         void Start()
@@ -24,21 +26,16 @@
         {
             if (target)
             {
-                MoveToTarget();
-                ResetAfterThreshold();
-            }
-        }
-
-        void MoveToTarget()
-        {
-            if (target && avatar.GetDistance(target) > stoppingDistance
-                       && avatar.GetDistance(target) < maxChaseDistance)
-            {
+                this.canChase = (target && avatar.GetDistance(target) > stoppingDistance && avatar.GetDistance(target) < maxChaseDistance);
+                if (this.canChase == true)
+                {
                 avatar.MoveAvatar((target.transform.position - transform.position).normalized);
-            }
-            else
-            {
-                avatar.MoveAvatar(Vector2.zero);
+                }
+                else
+                {
+                    avatar.MoveAvatar(Vector2.zero);
+                }
+                ResetAfterThreshold();
             }
         }
 

@@ -9,6 +9,7 @@ public class ActorAvatar : DialogueInteraction
     [SerializeField] float movementSpeed = 1.5f;
     Rigidbody2D rbody;
     Animator animator;
+    FollowAI followAI;
 
     const string ANIM_IS_WALKING = "isWalking";
     const string MOVEMENT_X = "movement_x";
@@ -17,11 +18,13 @@ public class ActorAvatar : DialogueInteraction
 
     [SerializeField] bool isIdle = false;
     [SerializeField] float idleTurnRate = 3f;
+    
 
     void Start()
     {
         rbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        followAI = GetComponent<FollowAI>();
         // Starts avatar facing down
         animator.SetFloat(MOVEMENT_Y, -1f);
 
@@ -59,7 +62,7 @@ public class ActorAvatar : DialogueInteraction
     {
         while (isIdle)
         {
-            if (PlayerAvatarControl.PlayerIsFree)
+            if (PlayerAvatarControl.PlayerIsFree && (followAI.target && this.GetDistance(followAI.target) > followAI.stoppingDistance || !followAI.target))
             {
                 animator.SetFloat(MOVEMENT_X, Random.Range(-1f, 1f));
                 animator.SetFloat(MOVEMENT_Y, Random.Range(-1f, 1f));

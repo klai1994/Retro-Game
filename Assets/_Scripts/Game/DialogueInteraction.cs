@@ -6,9 +6,9 @@ public class DialogueInteraction : MonoBehaviour
     [SerializeField] DialogueEventName[] eventNames = null;
 
     [SerializeField] float interactionDistance = 2.5f;
-    bool canInteractWith = false;
+    [SerializeField] bool canInteractWith = false;
 
-    PlayerAvatarControl player;
+    [SerializeField] PlayerAvatarControl player;
 
     // The index of text events for this particular actor
     int eventIndex;
@@ -33,10 +33,7 @@ public class DialogueInteraction : MonoBehaviour
 
     void OnDestroy()
     {
-        if (player)
-        {
-            PlayerAvatarControl.BroadcastPlayerInteraction -= Interact;
-        }
+        PlayerAvatarControl.BroadcastPlayerInteraction -= Interact;
     }
 
     // Ensures subclasses can subscribe to the player input broadcast delegate
@@ -60,8 +57,7 @@ public class DialogueInteraction : MonoBehaviour
 
     // Used for interactable dialogue in overworld, otherwise call DialogueSystem.InitiateDialogue directly
     void Interact()
-    {
-
+    {   
         ActorAvatar playerAvatar = player.GetComponent<ActorAvatar>();
         if (PlayerAvatarControl.PlayerIsFree && GetDistance(player.gameObject) < interactionDistance)
         {

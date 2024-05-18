@@ -65,7 +65,6 @@ public class PlayerAvatarControl : MonoBehaviour
     void Update()
     {
         PlayerIsFree = !(LetterboxController.letterboxController.EventOccuring);
-
         if (Input.GetKeyDown(KeyCode.C) && BroadcastPlayerInteraction != null)
         {
             BroadcastPlayerInteraction();
